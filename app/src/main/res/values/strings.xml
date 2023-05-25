@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">DespesasEmDia_DD</string>
+    <string name="logo_do_app_chamado_dd">Logo do APP, chamado DD</string>
+    <string name="nome">Nome</string>
+    <string name="digite_o_nome">Digite o nome</string>
+    <string name="digite_o_email">Digite o email</string>
+    <string name="digite_a_senha">Digite a senha</string>
+    <string name="repita_a_senha">Repita a senha</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="repita_sua_senha">Repita sua senha</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="informe_seu_nome">Informe seu nome</string>
+    <string name="informe_seu_email">Informe seu email</string>
+    <string name="informe_sua_senha">Informe sua senha</string>
+    <string name="digite_novamente_sua_senha">Digite novamente sua senha</string>
+    <string name="criar_conta">CRIAR CONTA</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="n_o_possui_conta">Não possui conta?</string>
+    <string name="cadastra_se">Cadastra-se</string>
+    <string name="entrar_com_google">ENTRAR COM GOOGLE</string>
+    <string name="recuperar_senha">Recuperar senha</string>
+    <string name="despesas">Despesas</string>
+    <string name="editar_conta">Editar Conta</string>
+    <string name="deletar_conta">Deletar Conta</string>
+    <string name="voltar">Voltar</string>
+    <string name="deletar">Deletar</string>
+    <string name="voc_realmente_deseja_deletar_sua_conta_lembrando_que_essa_a_o_n_o_pode_ser_desfeito_depois">Você realmente deseja deletar sua conta, lembrando que essa ação não pode ser desfeito depois?</string>
+    <string name="enviar">Enviar</string>
 </resources>
