@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/bubbles"
-        android:text="@string/cadastra_se"
+        android:text="@string/cadastre_se"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
