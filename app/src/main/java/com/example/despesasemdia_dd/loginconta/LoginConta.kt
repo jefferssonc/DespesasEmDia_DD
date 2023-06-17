@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.example.despesasemdia_dd.MainActivity
 import com.example.despesasemdia_dd.R
+import com.example.despesasemdia_dd.configconta.ConfigConta
 import com.example.despesasemdia_dd.criarconta.ActivityCriarConta
 import com.example.despesasemdia_dd.recuperarsenha.RecuperarSenha
 import com.google.android.material.snackbar.Snackbar
@@ -64,7 +64,7 @@ class LoginConta : AppCompatActivity() {
         }
     }
     private fun mudarParaPrincipal(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, ConfigConta::class.java)
         startActivity(intent)
         finish()
     }
@@ -77,13 +77,13 @@ class LoginConta : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        val usuarioLogado = FirebaseAuth.getInstance().currentUser
-
-        if (usuarioLogado != null){
-            mudarParaPrincipal()
-        }
-    }
+//    override fun onStart() {
+//        super.onStart()
+//
+//        val usuarioLogado = FirebaseAuth.getInstance().currentUser
+//
+//        if (usuarioLogado != null){
+//            mudarParaPrincipal()
+//        }
+//    }
 }
