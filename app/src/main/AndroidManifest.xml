@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DespesasEmDia_DD"
         tools:targetApi="31">
         <activity
+            android:name=".paginainicial.PaginaInicial"
+            android:exported="false" />
+        <activity
             android:name=".recuperarsenha.RecuperarSenha"
             android:exported="false" />
         <activity
