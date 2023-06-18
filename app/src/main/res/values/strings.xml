@@ -32,4 +32,5 @@
     <string name="cone_que_representa_o_usu_rio">Ícone que representa o usuário</string>
     <string name="despesa_total_r_0_00">Despesa Total: R$ 0,00</string>
     <string name="hist_rico_de_gastos">Histórico de Gastos</string>
+    <string name="seta_para_voltar_para_tela_anterior">Seta para voltar para tela anterior</string>
 </resources>
