@@ -33,4 +33,5 @@
     <string name="despesa_total_r_0_00">Despesa Total: R$ 0,00</string>
     <string name="hist_rico_de_gastos">Histórico de Gastos</string>
     <string name="seta_para_voltar_para_tela_anterior">Seta para voltar para tela anterior</string>
+    <string name="bot_o_para_voltar_na_tela_anterior">Botão para voltar na tela anterior</string>
 </resources>

@@ -83,15 +83,19 @@
             android:layout_height="wrap_content" />
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/imageView5"
+    <ImageButton
+        android:id="@+id/btnVoltarPerfilIndividual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:contentDescription="@string/seta_para_voltar_para_tela_anterior"
+        android:backgroundTint="@color/light_cyan"
+        android:contentDescription="@string/bot_o_para_voltar_na_tela_anterior"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
