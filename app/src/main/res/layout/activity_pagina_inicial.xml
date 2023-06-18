@@ -27,78 +27,35 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="72dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/userlogo" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="126dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        tools:layout_editor_absoluteY="27dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="66dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="28dp"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:srcCompat="@drawable/users_group_people_icon"
-        tools:layout_editor_absoluteY="652dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="75dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:srcCompat="@drawable/home_house_icon" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="67dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:srcCompat="@drawable/_201370_add_plus_button_ui_new_icon" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="69dp"
-        android:layout_height="67dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:srcCompat="@drawable/despesas_icon"
-        tools:layout_editor_absoluteY="650dp" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="40dp"
-        android:layout_height="31dp"
-        app:srcCompat="@drawable/_020743_agenda_checklist_items_list_listing_icon"
-        tools:layout_editor_absoluteX="355dp"
-        tools:layout_editor_absoluteY="27dp" />
-
     <View
         android:id="@+id/view3"
         android:layout_width="293dp"
         android:layout_height="128dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="68dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="410dp"
+        android:layout_height="83dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="410dp"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
