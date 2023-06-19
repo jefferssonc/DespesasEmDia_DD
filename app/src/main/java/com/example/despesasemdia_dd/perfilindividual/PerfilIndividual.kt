@@ -5,16 +5,40 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class PerfilIndividual : AppCompatActivity() {
 
+    private val db = FirebaseFirestore.getInstance()
     private val user = FirebaseAuth.getInstance().currentUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
+        somaDespesa()
+    }
+
+    private fun somaDespesa(){
+        val collectionRef = db.collection("Despesas")
+
+        collectionRef.get()
+            .addOnSuccessListener { querySnapshot ->
+                var soma = 0
+
+                for (document in querySnapshot) {
+                    // Obtém o valor do campo desejado (substitua "campo" pelo nome do campo)
+                    val valor = document.getLong("Valor")?.toInt() ?: 0
+
+                    // Soma os valores
+                    soma += valor
+                }
+
+                val txtdespesa = findViewById<TextView>(R.id.despesaTotalPerfilIndividual)
+                txtdespesa.text = "Despesa Total: $soma R$"
+            }
 
     }
+
 
 //    private fun voltarParaPrincipal(voltar: String){
 //        val btvoltar = findViewById<Button>(R.id.imageView5)

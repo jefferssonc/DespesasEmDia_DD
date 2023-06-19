@@ -25,7 +25,7 @@
             android:name=".configconta.ConfigConta"
             android:exported="false" />
         <activity
-            android:name=".loginconta.LoginConta"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".criarconta.ActivityCriarConta"
@@ -34,7 +34,7 @@
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".loginconta.LoginConta"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
