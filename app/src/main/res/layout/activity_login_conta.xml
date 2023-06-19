@@ -22,9 +22,7 @@
         android:id="@+id/EmailLoginConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/digite_o_email"
@@ -32,6 +30,7 @@
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -39,9 +38,7 @@
         android:id="@+id/SenhaLoginConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="165dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/digite_a_senha"
@@ -49,17 +46,18 @@
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailLoginConta" />
 
     <Button
         android:id="@+id/btnEntrarLoginConta"
+        style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/snow"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_style"
         android:text="@string/entrar"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SenhaLoginConta" />
@@ -68,7 +66,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         android:text="@string/n_o_possui_conta"
         app:layout_constraintEnd_toStartOf="@+id/btnCadastrarLoginConta"
         app:layout_constraintHorizontal_bias="0.5"
@@ -77,12 +75,12 @@
 
     <Button
         android:id="@+id/btnCadastrarLoginConta"
+        style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/bubbles"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_style"
         android:text="@string/cadastre_se"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -90,28 +88,26 @@
 
     <Button
         android:id="@+id/btnGoogleLoginConta"
+        style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/snow"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/google_icon"
         android:text="@string/entrar_com_google"
-        android:textColor="@color/black"
-        android:drawableStart="@drawable/google_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnRecuperarSenhaLoginConta"
+        style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="260dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/bubbles"
+        android:layout_marginBottom="20dp"
         android:text="@string/recuperar_senha"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnGoogleLoginConta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
