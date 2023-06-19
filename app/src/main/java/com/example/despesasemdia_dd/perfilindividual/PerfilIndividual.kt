@@ -14,7 +14,6 @@ class PerfilIndividual : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
 
-
     }
 
 //    private fun voltarParaPrincipal(voltar: String){
@@ -29,9 +28,9 @@ class PerfilIndividual : AppCompatActivity() {
 
         override fun onStart() {
             super.onStart()
-                val txtnome = findViewById<TextView>(R.id.NomeUserPerfIndividual)
-                val username = user?.displayName
-                txtnome.setText(username)
+            val txtnome = findViewById<TextView>(R.id.NomeUserPerfIndividual)
+            val username = user?.displayName
+            txtnome.text = username
     }
 
 }

@@ -30,8 +30,7 @@ class AtualizarConta : AppCompatActivity() {
         btteste.setOnClickListener {
             if (email.text.isNotEmpty()) {
                 atualizaEmail(email.text.toString(), senha.text.toString(), nome.text.toString())
-               // atualizaSenha(senha.text.toString())
-//                atualizaNome(nome.text.toString())
+
 
 
             }

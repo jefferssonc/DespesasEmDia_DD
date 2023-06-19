@@ -6,24 +6,22 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.example.despesasemdia_dd.MainActivity
 import com.example.despesasemdia_dd.R
+import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
-import com.google.firebase.ktx.Firebase
 
 class ActivityCriarConta : AppCompatActivity() {
 
     private val auth = FirebaseAuth.getInstance()
 
     //private val db = FirebaseFirestore.getInstance()
-    private val usuario = Firebase.auth.currentUser
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,11 +51,18 @@ class ActivityCriarConta : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email.text.toString(), senha.text.toString())
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val profileUpdates = userProfileChangeRequest {
-                                displayName = nome_user.text.toString()
+
+                            auth.signInWithEmailAndPassword(email.text.toString(), senha.text.toString()).addOnCompleteListener {login->
+                                if (login.isSuccessful) {
+                                    val user = FirebaseAuth.getInstance().currentUser
+                                    val profileUpdates = userProfileChangeRequest {
+                                        displayName = nome_user.text.toString()
+                                    }
+                                    user!!.updateProfile(profileUpdates)
+                                }
                             }
-                            usuario!!.updateProfile(profileUpdates)
-                            val intent = Intent(this, MainActivity::class.java)
+
+                            val intent = Intent(this, PerfilIndividual::class.java)
                             startActivity(intent)
                             finish()
                         }
