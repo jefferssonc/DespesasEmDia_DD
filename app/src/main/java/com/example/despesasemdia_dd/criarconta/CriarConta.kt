@@ -59,6 +59,7 @@ class ActivityCriarConta : AppCompatActivity() {
                             usuario!!.updateProfile(profileUpdates)
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
+                            finish()
                         }
                     }.addOnFailureListener { exception ->
                         val erro = when (exception) {
