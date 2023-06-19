@@ -13,6 +13,27 @@
         android:theme="@style/Theme.DespesasEmDia_DD"
         tools:targetApi="31">
         <activity
+            android:name=".perfilindividual.PerfilIndividual"
+            android:exported="false" />
+        <activity
+            android:name=".recuperarsenha.RecuperarSenha"
+            android:exported="false" />
+        <activity
+            android:name=".deletarconta.DeletarConta"
+            android:exported="false" />
+        <activity
+            android:name=".configconta.ConfigConta"
+            android:exported="false" />
+        <activity
+            android:name=".loginconta.LoginConta"
+            android:exported="false" />
+        <activity
+            android:name=".criarconta.CriarConta"
+            android:exported="false" />
+        <activity
+            android:name=".atualizarconta.AtualizarConta"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

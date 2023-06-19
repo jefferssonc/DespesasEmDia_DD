@@ -2,4 +2,19 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="snow">#FDF9F9</color>
+    <color name="azure">#F5FFFF</color>
+    <color name="cultured">#F5F5F5</color>
+    <color name="ghost_white">#F9F9F9</color>
+    <color name="lotion">#FDFDFD</color>
+    <color name="light_silver">#D9D9D9</color>
+    <color name="silver_sand">#B7BDCB</color>
+    <color name="taupe_grey">#888888</color>
+    <color name="chinese_silver">#CECDCD</color>
+    <color name="platinum">#E8E4E4</color>
+    <color name="bubbles">#E8FFFF</color>
+    <color name="light_cyan">#DAFFFF</color>
+    <color name="winter_wizard">#9BDBFF</color>
+    <color name="yankees_blue">#112A46</color>
+
 </resources>
