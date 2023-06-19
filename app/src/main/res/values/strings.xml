@@ -37,4 +37,8 @@
     <string name="ol_mundo">Olá, mundo</string>
     <string name="imagem_que_representa_a_logo_da_despesa">Imagem que representa a logo da despesa</string>
     <string name="grupo_despesa">Grupo despesa</string>
+    <string name="despesas_do_grupo">Despesas do grupo</string>
+    <string name="r_0_00">R$ 0,00</string>
+    <string name="dd_mm_aaaa">DD/MM/AAAA</string>
+    <string name="bot_o_de_deletar_despesa">Botão de deletar despesa</string>
 </resources>
