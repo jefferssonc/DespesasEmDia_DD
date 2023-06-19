@@ -9,6 +9,7 @@
 
     <EditText
         android:id="@+id/nomeConfigConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -24,6 +25,7 @@
 
     <EditText
         android:id="@+id/emailConfigConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -39,6 +41,7 @@
 
     <EditText
         android:id="@+id/senhaConfigConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -54,6 +57,7 @@
 
     <EditText
         android:id="@+id/repitaSenhaConfigConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

@@ -9,6 +9,7 @@
 
     <EditText
         android:id="@+id/NomeCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -26,6 +27,7 @@
 
     <EditText
         android:id="@+id/EmailCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -43,6 +45,7 @@
 
     <EditText
         android:id="@+id/SenhaCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -60,6 +63,7 @@
 
     <EditText
         android:id="@+id/RepitaSenhaCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
