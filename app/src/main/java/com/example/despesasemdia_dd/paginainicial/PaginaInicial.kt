@@ -24,7 +24,7 @@ class PaginaInicial : AppCompatActivity() {
         val despesa1 = Despesa(
             R.drawable.home_house_icon,
             nome = "Residencia",
-            preco = "R$ 899,34"
+            preco = ""
         )
         listaDespesas.add(despesa1)
     }
