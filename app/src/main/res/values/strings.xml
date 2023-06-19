@@ -34,4 +34,7 @@
     <string name="hist_rico_de_gastos">Histórico de Gastos</string>
     <string name="seta_para_voltar_para_tela_anterior">Seta para voltar para tela anterior</string>
     <string name="bot_o_para_voltar_na_tela_anterior">Botão para voltar na tela anterior</string>
+    <string name="ol_mundo">Olá, mundo</string>
+    <string name="imagem_que_representa_a_logo_da_despesa">Imagem que representa a logo da despesa</string>
+    <string name="grupo_despesa">Grupo despesa</string>
 </resources>
