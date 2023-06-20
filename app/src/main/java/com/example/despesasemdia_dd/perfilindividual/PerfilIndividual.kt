@@ -1,10 +1,13 @@
 package com.example.despesasemdia_dd.perfilindividual
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
+import com.example.despesasemdia_dd.paginainicial.PaginaInicial
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -16,6 +19,7 @@ class PerfilIndividual : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
+        voltarParaPrincipal()
 
     }
 
@@ -39,15 +43,15 @@ class PerfilIndividual : AppCompatActivity() {
     }
 
 
-//    private fun voltarParaPrincipal(voltar: String){
-//        val btvoltar = findViewById<Button>(R.id.imageView5)
-//
-//        btvoltar.setOnClickListener{view ->
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
+    private fun voltarParaPrincipal(){
+        val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, PaginaInicial::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 
         override fun onStart() {
             super.onStart()
