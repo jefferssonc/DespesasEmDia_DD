@@ -41,4 +41,10 @@
     <string name="r_0_00">R$ 0,00</string>
     <string name="dd_mm_aaaa">DD/MM/AAAA</string>
     <string name="bot_o_de_deletar_despesa">Botão de deletar despesa</string>
+    <string name="valor">Valor</string>
+    <string name="categoria">Categoria</string>
+    <string name="bot_o_de_adicionar_despesa">Botão de adicionar despesa</string>
+    <string name="bot_o_de_voltar">Botão de voltar</string>
+    <string name="informe_o_valor">Informe o valor</string>
+    <string name="informe_a_categoria">Informe a categoria</string>
 </resources>

@@ -9,11 +9,10 @@
 
     <EditText
         android:id="@+id/NomeCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/digite_o_nome"
@@ -26,11 +25,10 @@
 
     <EditText
         android:id="@+id/EmailCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/digite_o_email"
@@ -43,11 +41,10 @@
 
     <EditText
         android:id="@+id/SenhaCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/digite_a_senha"
@@ -60,11 +57,10 @@
 
     <EditText
         android:id="@+id/RepitaSenhaCriarConta"
+        style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/repita_a_senha"
@@ -77,12 +73,12 @@
 
     <Button
         android:id="@+id/btnCriarConta"
+        style="@style/button"
+        android:background="@drawable/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:backgroundTint="@color/snow"
+        android:layout_marginBottom="200dp"
         android:text="@string/criar_conta"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
