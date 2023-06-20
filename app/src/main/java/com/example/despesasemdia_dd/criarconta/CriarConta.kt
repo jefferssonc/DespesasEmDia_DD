@@ -39,7 +39,7 @@ class ActivityCriarConta : AppCompatActivity() {
 
         btcriar_conta.setOnClickListener { view ->
             if (nome_user.text.isNotBlank() || email.text.isNotBlank() || senha.text.isNotBlank() || rep_senha.text.isNotBlank()) {
-                if(senha.text == rep_senha.text) {
+                if(senha.text.toString() == rep_senha.text.toString()) {
                     auth.createUserWithEmailAndPassword(
                         email.text.toString(),
                         senha.text.toString()
