@@ -1,5 +1,6 @@
 package com.example.despesasemdia_dd.perfilindividual
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,9 +16,10 @@ class PerfilIndividual : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
-        somaDespesa()
+
     }
 
+    @SuppressLint("SetTextI18n")
     private fun somaDespesa(){
         val collectionRef = db.collection("Despesas")
 
@@ -55,6 +57,7 @@ class PerfilIndividual : AppCompatActivity() {
             val txtnome = findViewById<TextView>(R.id.NomeUserPerfIndividual)
             val username = user?.displayName
             txtnome.text = username
+            somaDespesa()
     }
 
 }
