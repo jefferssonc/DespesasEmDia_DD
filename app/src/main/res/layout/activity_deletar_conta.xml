@@ -9,12 +9,12 @@
 
     <Button
         android:id="@+id/btnVoltarDeletarConta"
+        style="@style/button"
+        android:background="@drawable/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
-        android:backgroundTint="@color/cultured"
         android:text="@string/voltar"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/btnDeletarDeletarConta"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,12 +22,12 @@
 
     <Button
         android:id="@+id/btnDeletarDeletarConta"
+        style="@style/button"
+        android:background="@drawable/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
-        android:backgroundTint="@color/cultured"
         android:text="@string/deletar"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnVoltarDeletarConta"
