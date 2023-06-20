@@ -28,10 +28,7 @@ class PerfilIndividual : AppCompatActivity() {
                 var soma = 0
 
                 for (document in querySnapshot) {
-                    // Obtém o valor do campo desejado (substitua "campo" pelo nome do campo)
                     val valor = document.getLong("Valor")?.toInt() ?: 0
-
-                    // Soma os valores
                     soma += valor
                 }
 
