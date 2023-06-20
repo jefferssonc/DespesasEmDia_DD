@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/light_cyan"
             android:id="@+id/recyclerView_despesas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
