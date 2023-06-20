@@ -13,11 +13,9 @@
         android:theme="@style/Theme.DespesasEmDia_DD"
         tools:targetApi="31">
         <activity
-            android:name=".adicionardespesa.AdicionarDespesa"
-            android:exported="false" />
-        <activity
-            android:name=".paginainicial.PaginaInicial"
-            android:exported="false" />
+            android:name=".MainActivity"
+            android:exported="false"
+            />
         <activity
             android:name=".perfilindividual.PerfilIndividual"
             android:exported="false" />
@@ -40,7 +38,7 @@
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".paginainicial.PaginaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
