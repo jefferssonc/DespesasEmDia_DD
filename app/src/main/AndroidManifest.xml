@@ -20,6 +20,9 @@
             android:name=".perfilindividual.PerfilIndividual"
             android:exported="false" />
         <activity
+            android:name=".adicionardespesa.AdicionarDespesa"
+            android:exported="false" />
+        <activity
             android:name=".recuperarsenha.RecuperarSenha"
             android:exported="false" />
         <activity

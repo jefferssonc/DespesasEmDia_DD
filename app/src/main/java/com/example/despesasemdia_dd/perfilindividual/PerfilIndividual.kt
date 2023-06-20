@@ -19,7 +19,7 @@ class PerfilIndividual : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
-        voltarParaPrincipal()
+        voltarParaInicial()
 
     }
 
@@ -43,7 +43,7 @@ class PerfilIndividual : AppCompatActivity() {
     }
 
 
-    private fun voltarParaPrincipal(){
+    private fun voltarParaInicial(){
         val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
 
         btvoltar.setOnClickListener{view ->
