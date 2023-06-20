@@ -32,7 +32,7 @@
             android:name=".loginconta.LoginConta"
             android:exported="false" />
         <activity
-            android:name=".criarconta.CriarConta"
+            android:name=".criarconta.ActivityCriarConta"
             android:exported="false" />
         <activity
             android:name=".atualizarconta.AtualizarConta"

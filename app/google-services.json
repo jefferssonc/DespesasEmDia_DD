@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "448755623915",
+    "project_id": "despesaemdia",
+    "storage_bucket": "despesaemdia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448755623915:android:30ba704179ff690a359bae",
+        "android_client_info": {
+          "package_name": "com.example.despesasemdia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448755623915-m53efj7ksdpki4o49f8ru0ktebvn1knb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdO2EF4RDvFGKDohfuQJr8_vDyCKpoQV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448755623915-m53efj7ksdpki4o49f8ru0ktebvn1knb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448755623915:android:39fc738719f118c1359bae",
+        "android_client_info": {
+          "package_name": "com.example.despesasemdia_dd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448755623915-m53efj7ksdpki4o49f8ru0ktebvn1knb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdO2EF4RDvFGKDohfuQJr8_vDyCKpoQV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448755623915-m53efj7ksdpki4o49f8ru0ktebvn1knb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
