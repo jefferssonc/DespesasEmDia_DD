@@ -136,6 +136,6 @@
         app:layout_constraintEnd_toStartOf="@+id/btnDespesa"
         app:layout_constraintStart_toStartOf="@+id/view8"
         app:layout_constraintTop_toTopOf="@+id/view8"
-        app:srcCompat="@drawable/home_house_icon" />
+        app:srcCompat="@drawable/house_main_menu_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
