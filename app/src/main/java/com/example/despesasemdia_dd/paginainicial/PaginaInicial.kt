@@ -27,5 +27,43 @@ class PaginaInicial : AppCompatActivity() {
             preco = ""
         )
         listaDespesas.add(despesa1)
+
+        val despesa2 = Despesa(
+            R.drawable.comida_icon,
+            nome = "Alimentação",
+            preco = ""
+        )
+        listaDespesas.add(despesa2)
+
+        val despesa3 = Despesa(
+            R.drawable.despesa_transporte_icon,
+            nome = "Transporte",
+            preco = ""
+        )
+        listaDespesas.add(despesa3)
+        val despesa4 = Despesa(
+            R.drawable.despesasaude_icon,
+            nome = "Saúde",
+            preco = ""
+        )
+        listaDespesas.add(despesa4)
+        val despesa5 = Despesa(
+            R.drawable.despesalazer_icon,
+            nome = "Diversão",
+            preco = ""
+        )
+        listaDespesas.add(despesa5)
+        val despesa6 = Despesa(
+            R.drawable.despesaeducacao_icon,
+            nome = "Educação",
+            preco = ""
+        )
+        listaDespesas.add(despesa6)
+        val despesa7 = Despesa(
+            R.drawable.despesaoutros_icon,
+            nome = "Outros",
+            preco = ""
+        )
+        listaDespesas.add(despesa7)
     }
 }

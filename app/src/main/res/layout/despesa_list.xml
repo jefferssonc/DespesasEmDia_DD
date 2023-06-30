@@ -5,37 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="-43dp"
-    tools:layout_editor_absoluteY="8dp">
+    tools:layout_editor_absoluteY="8dp"
+    >
 
 
     <ImageView
         android:id="@+id/foto_despesa"
         android:layout_width="69dp"
         android:layout_height="46dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/container_despesa"
+        app:layout_constraintStart_toStartOf="@+id/container_despesa"
+        app:layout_constraintTop_toTopOf="@+id/container_despesa"
+        app:layout_constraintVertical_bias="0.465"
         app:srcCompat="@drawable/home_house_icon" />
 
     <TextView
         android:id="@+id/nome_despesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="48dp"
         android:text="Nome_despesa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foto_despesa" />
+        app:layout_constraintBottom_toBottomOf="@+id/container_despesa"
+        app:layout_constraintStart_toStartOf="@+id/container_despesa"
+        app:layout_constraintTop_toBottomOf="@+id/foto_despesa"
+        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
         android:id="@+id/preco"
         android:layout_width="115dp"
         android:layout_height="21dp"
-        android:layout_marginStart="76dp"
         android:layout_marginTop="64dp"
         android:text="R$ 890,40"
+        app:layout_constraintEnd_toEndOf="@+id/container_despesa"
+        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toEndOf="@+id/foto_despesa"
+        app:layout_constraintTop_toTopOf="@+id/container_despesa" />
+
+    <View
+        android:id="@+id/container_despesa"
+        android:layout_width="381dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
