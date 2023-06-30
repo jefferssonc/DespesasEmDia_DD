@@ -20,9 +20,6 @@
             android:name=".perfilindividual.PerfilIndividual"
             android:exported="false" />
         <activity
-            android:name=".adicionardespesa.AdicionarDespesa"
-            android:exported="false" />
-        <activity
             android:name=".recuperarsenha.RecuperarSenha"
             android:exported="false" />
         <activity
@@ -32,7 +29,7 @@
             android:name=".configconta.ConfigConta"
             android:exported="false" />
         <activity
-            android:name=".paginainicial.PaginaInicial"
+            android:name=".loginconta.LoginConta"
             android:exported="false" />
         <activity
             android:name=".criarconta.ActivityCriarConta"
@@ -41,7 +38,7 @@
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".loginconta.LoginConta"
+            android:name=".paginainicial.PaginaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
