@@ -62,4 +62,8 @@
     <string name="participantes">Participantes</string>
     <string name="bot_o_para_adicionar_participante">Botão para adicionar participante</string>
     <string name="r_11_2424">R$ 11,2424</string>
+    <string name="criar_grupo">Criar Grupo</string>
+    <string name="digite_o_nome_do_grupo">Digite o Nome do Grupo</string>
+    <string name="informe_nome_do_grupo">Informe nome do grupo</string>
+    <string name="criar">Criar</string>
 </resources>

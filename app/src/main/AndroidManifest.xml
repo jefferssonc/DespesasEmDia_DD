@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DespesasEmDia_DD"
         tools:targetApi="31">
         <activity
+            android:name=".criargrupo.CriarGrupo"
+            android:exported="false" />
+        <activity
             android:name=".grupo.Grupo"
             android:exported="false" />
         <activity
