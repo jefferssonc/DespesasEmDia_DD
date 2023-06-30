@@ -48,4 +48,11 @@
     <string name="informe_o_valor">Informe o valor</string>
     <string name="informe_a_categoria">Informe a categoria</string>
     <string name="categoria_da_despesa">Categoria da Despesa</string>
+    <string name="grupos">Grupos</string>
+    <string name="bot_o_para_voltar_para_tela_anterior">Botão para voltar para tela anterior</string>
+    <string name="criar_novo_grupo">Criar Novo Grupo</string>
+    <string name="bot_o_para_adicionar_um_novo_grupo">Botão para adicionar um novo grupo</string>
+    <string name="bot_o_de_despesas_grupos">Botão de despesas grupos</string>
+    <string name="bot_o_para_ir_para_grupos">Botão para ir para grupos</string>
+    <string name="bot_o_pagina_inicial">Botão pagina inicial</string>
 </resources>
