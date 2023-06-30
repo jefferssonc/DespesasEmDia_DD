@@ -9,8 +9,8 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="402dp"
+        android:layout_width="419dp"
+        android:layout_height="407dp"
         android:background="@color/bubbles"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
