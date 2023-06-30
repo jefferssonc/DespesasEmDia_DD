@@ -37,42 +37,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/viewGraficoPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="163dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NomeUserPerfIndividual" />
-
     <TextView
         android:id="@+id/despesaTotalPerfilIndividual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/despesa_total_r_0_00"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewGraficoPerfil" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/hist_rico_de_gastos"
         android:textColor="#8D6E63"
-        app:layout_constraintBottom_toTopOf="@+id/scrollViewPerfilIndividual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/despesaTotalPerfilIndividual" />
 
     <ScrollView
         android:id="@+id/scrollViewPerfilIndividual"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -80,10 +70,10 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewPerfilIndividual"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/perfil_individual_item"/>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/perfil_individual_item" />
     </ScrollView>
 
     <ImageButton

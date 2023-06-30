@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="@string/despesas_do_grupo"
+        android:text="@string/categoria_da_despesa"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.08"

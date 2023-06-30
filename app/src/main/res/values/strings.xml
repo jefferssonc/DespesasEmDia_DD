@@ -47,4 +47,5 @@
     <string name="bot_o_de_voltar">Botão de voltar</string>
     <string name="informe_o_valor">Informe o valor</string>
     <string name="informe_a_categoria">Informe a categoria</string>
+    <string name="categoria_da_despesa">Categoria da Despesa</string>
 </resources>

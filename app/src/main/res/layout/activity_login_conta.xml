@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:drawableLeft="@drawable/google_icon"
+        android:drawableLeft="@drawable/google_logo"
         android:text="@string/entrar_com_google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
