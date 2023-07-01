@@ -20,50 +20,41 @@ class PaginaInicial : AppCompatActivity() {
         val listaDespesas: MutableList<Despesa> = mutableListOf()
         val adapterDespesa = AdapterDespesa(this,listaDespesas)
         recyclerView_despesas.adapter = adapterDespesa
+
         //criando items
-        val despesa1 = Despesa(
-            R.drawable.home_house_icon,
-            nome = "Residencia",
-            preco = ""
-        )
+        val despesa1 = Despesa(nome = "Residencia")
+        despesa1.imagem = R.drawable.home_house_icon
+        despesa1.preco = ""
         listaDespesas.add(despesa1)
 
-        val despesa2 = Despesa(
-            R.drawable.comida_icon,
-            nome = "Alimentação",
-            preco = ""
-        )
+        val despesa2 = Despesa(nome = "Alimentação")
+        despesa2.imagem = R.drawable.comida_icon
+        despesa2.preco = ""
         listaDespesas.add(despesa2)
 
-        val despesa3 = Despesa(
-            R.drawable.despesa_transporte_icon,
-            nome = "Transporte",
-            preco = ""
-        )
+        val despesa3 = Despesa(nome = "Transporte")
+            despesa3.imagem = R.drawable.despesa_transporte_icon
+            despesa3.preco = ""
         listaDespesas.add(despesa3)
-        val despesa4 = Despesa(
-            R.drawable.despesasaude_icon,
-            nome = "Saúde",
-            preco = ""
-        )
+
+        val despesa4 = Despesa(nome = "Saúde")
+        despesa4.imagem = R.drawable.despesasaude_icon
+        despesa4.preco = ""
         listaDespesas.add(despesa4)
-        val despesa5 = Despesa(
-            R.drawable.despesalazer_icon,
-            nome = "Diversão",
-            preco = ""
-        )
+
+        val despesa5 = Despesa(nome = "Diversão")
+        despesa5.imagem = R.drawable.despesalazer_icon
+        despesa5.preco = ""
         listaDespesas.add(despesa5)
-        val despesa6 = Despesa(
-            R.drawable.despesaeducacao_icon,
-            nome = "Educação",
-            preco = ""
-        )
+
+        val despesa6 = Despesa(nome = "Educação")
+        despesa6.imagem = R.drawable.despesaeducacao_icon
+        despesa6.preco = ""
         listaDespesas.add(despesa6)
-        val despesa7 = Despesa(
-            R.drawable.despesaoutros_icon,
-            nome = "Outros",
-            preco = ""
-        )
+
+        val despesa7 = Despesa(nome = "Outros")
+        despesa7.imagem = R.drawable.despesaoutros_icon
+        despesa7.preco = ""
         listaDespesas.add(despesa7)
     }
 }
