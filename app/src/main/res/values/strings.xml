@@ -66,4 +66,6 @@
     <string name="digite_o_nome_do_grupo">Digite o Nome do Grupo</string>
     <string name="informe_nome_do_grupo">Informe nome do grupo</string>
     <string name="criar">Criar</string>
+    <string name="adicionar_pessoa_no_grupo">Adicionar Pessoa no Grupo</string>
+    <string name="digite_o_email_do_novo_participante">Digite o email do novo participante</string>
 </resources>
