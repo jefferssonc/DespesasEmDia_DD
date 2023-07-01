@@ -18,17 +18,12 @@ class AdapterPerfil(private val context : Context, private val despesaPerfil:Mut
         val holderPerfil = PerfilViewHolder(itemPerfil)
         return holderPerfil
     }
-
     override fun onBindViewHolder(holder: PerfilViewHolder, position: Int) {
         val despesa = despesaPerfil[position]
         holder.bind(despesa)
 
     }
-
-    override fun getItemCount(): Int {
-        return despesaPerfil.size
-    }
-
+    override fun getItemCount(): Int { return despesaPerfil.size }
     inner class PerfilViewHolder (itemView : View):RecyclerView.ViewHolder(itemView){
 
          val categoria = itemView.findViewById<TextView>(R.id.despesasPerfilIndividual)

@@ -20,13 +20,11 @@ class AdapterDespesa(private val context: Context,private val despesas: MutableL
 
     }
     override fun getItemCount(): Int = despesas.size
-
     override fun onBindViewHolder(holder: DespesaViewHolder, position: Int) {
         holder.foto.setImageResource(despesas[position].imagem)
         holder.nome.text = despesas[position].nome
         holder.preco.text = despesas[position].preco
     }
-
     inner class DespesaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val foto = itemView.findViewById<ImageView>(R.id.foto_despesa)
         val nome = itemView.findViewById<TextView>(R.id.nome_despesa)
