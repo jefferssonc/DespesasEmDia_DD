@@ -67,4 +67,6 @@
     <string name="informe_nome_do_grupo">Informe nome do grupo</string>
     <string name="criar">Criar</string>
     <string name="bot_o_de_fechar">Botão de fechar</string>
+    <string name="testandonome">Vinicius</string>
+    <string name="msg_de_bemvindo">Bem vindo,</string>
 </resources>
