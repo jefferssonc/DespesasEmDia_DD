@@ -9,12 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.model.Despesa
-import org.w3c.dom.Text
 
 class AdapterDespesa(private val context: Context,private val despesas: MutableList<Despesa>): RecyclerView.Adapter<AdapterDespesa.DespesaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DespesaViewHolder {
-        val itemLista = LayoutInflater.from(context).inflate(R.layout.despesa_list,parent,false)
+        val itemLista = LayoutInflater.from(context).inflate(R.layout.pag_inicial_list,parent,false)
         val holder = DespesaViewHolder(itemLista)
         return holder
 
