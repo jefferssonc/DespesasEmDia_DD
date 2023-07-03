@@ -38,13 +38,13 @@ class PaginaInicial : AppCompatActivity() {
             .addOnSuccessListener { querySnapshot ->
 
                 for (document in querySnapshot) {
-                    val valor = document.getLong("Valor")
+                    //val valor = document.getLong("Valor")
                     val nome = document.getString("Nome")
                     recyclerView_despesas.adapter = adapterDespesa
                     val despesa = Despesa(
-                        R.drawable.home_house_icon,
+                       // R.drawable.home_house_icon,
                         nome = nome.toString(),
-                        preco = valor.toString()
+                      //  preco = valor.toString()
                     )
                     listaDespesas.add(despesa)
                 }

@@ -47,7 +47,7 @@ class PerfilIndividual : AppCompatActivity() {
     private fun somaDespesa(){
         val collectionRef = db.collection("Despesas")
 
-        collectionRef.get()
+        collectionRef.whereEqualTo("Conta", user?.displayName).get()
             .addOnSuccessListener { querySnapshot ->
                 var soma = 0
 
