@@ -24,10 +24,11 @@ class PerfilIndividual : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun somaDespesa(){
+    fun somaDespesa(){
         val collectionRef = db.collection("Despesas")
 
-        collectionRef.get()
+
+        collectionRef.whereEqualTo("Conta", user?.displayName).get()
             .addOnSuccessListener { querySnapshot ->
                 var soma = 0
 
@@ -49,7 +50,6 @@ class PerfilIndividual : AppCompatActivity() {
         btvoltar.setOnClickListener{view ->
             val intent = Intent(this, PaginaInicial::class.java)
             startActivity(intent)
-            finish()
         }
     }
 
