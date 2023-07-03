@@ -27,11 +27,14 @@
 
     <View
         android:id="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        android:layout_width="335dp"
-        android:layout_height="150dp"
+        android:layout_width="356dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="64dp"
+        android:layout_marginEnd="20dp"
         android:background="@color/light_cyan"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view5" />
 
@@ -60,8 +63,8 @@
 
     <View
         android:id="@+id/view5"
-        android:layout_width="407dp"
-        android:layout_height="117dp"
+        android:layout_width="413dp"
+        android:layout_height="114dp"
         android:background="@color/light_cyan"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,12 +90,12 @@
         android:id="@+id/GASTO_TOTAL_PAG_INICIAL"
         android:layout_width="152dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="48dp"
         android:text="R$ 3000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
         app:layout_constraintEnd_toEndOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <ImageButton
@@ -153,15 +156,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:textSize="22sp"
-        android:textColor="@color/chinese_silver"
+        android:layout_marginTop="52dp"
         android:text="Historico de despesas"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        android:textColor="@color/chinese_silver"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintTop_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintTop_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL" />
 
     <TextView
         android:id="@+id/textView21"

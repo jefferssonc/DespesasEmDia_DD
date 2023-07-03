@@ -69,4 +69,7 @@
     <string name="bot_o_de_fechar">Botão de fechar</string>
     <string name="testandonome">Vinicius</string>
     <string name="msg_de_bemvindo">Bem vindo,</string>
+    <string name="nome_do_grupo">nome_do_grupo</string>
+    <string name="participantedogrupo">Vinicius</string>
+    <string name="categoriadadespesa">Transporte</string>
 </resources>

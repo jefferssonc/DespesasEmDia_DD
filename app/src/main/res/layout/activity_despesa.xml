@@ -53,14 +53,16 @@
       app:layout_constraintStart_toStartOf="parent" />
 
   <androidx.recyclerview.widget.RecyclerView
-      android:layout_width="410dp"
-      android:layout_height="496dp"
-      android:background="@color/light_cyan"
       android:id="@+id/recyclerView_despesa"
+      android:layout_width="407dp"
+      android:layout_height="521dp"
+      android:layout_marginTop="64dp"
+      android:background="@color/light_cyan"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/view6" />
+      app:layout_constraintTop_toBottomOf="@+id/view6"
+      tools:listitem="@layout/pag_despesas_list" />
 
   <ImageButton
       android:id="@+id/btnDespesa"

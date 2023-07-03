@@ -89,36 +89,37 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="373dp"
+        android:layout_height="239dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/bubbles"
         app:layout_constraintBottom_toTopOf="@+id/btnSairGrupo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/pag_grupo_list" />
 
     <TextView
         android:id="@+id/textDespesaGrupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="84dp"
         android:text="@string/r_11_2424"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view9" />
 
     <ImageButton
         android:id="@+id/btnAdicionarParticipante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/snow"
         android:contentDescription="@string/bot_o_para_adicionar_participante"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:srcCompat="@drawable/adicionar_icon" />
 
@@ -126,11 +127,11 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="36dp"
         android:text="@string/participantes"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDespesaGrupo"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.933" />
 </androidx.constraintlayout.widget.ConstraintLayout>
