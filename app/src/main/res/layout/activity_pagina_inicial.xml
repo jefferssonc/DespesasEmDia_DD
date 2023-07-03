@@ -7,23 +7,15 @@
     tools:context=".paginainicial.PaginaInicial">
 
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="371dp"
-        android:layout_height="312dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="1dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_despesas_inicial"
+        android:layout_width="400dp"
+        android:layout_height="318dp"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_despesas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/pag_inicial_list" />
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:listitem="@layout/pag_inicial_list" />
 
     <View
         android:id="@+id/View_Do_Gasto_Total_PAG_INICIAL"
@@ -57,9 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/view5"

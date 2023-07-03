@@ -19,7 +19,7 @@
             android:name=".despesasgrupo.DespesasGrupo"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".despesa.Despesa"
             android:exported="false" />
         <activity
             android:name=".criargrupo.CriarGrupo"
@@ -31,7 +31,7 @@
             android:name=".grupos.Grupos"
             android:exported="false" />
         <activity
-            android:name=".paginainicial.PaginaInicial"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".perfilindividual.PerfilIndividual"
@@ -55,7 +55,7 @@
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".despesa.Despesa"
+            android:name=".paginainicial.PaginaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

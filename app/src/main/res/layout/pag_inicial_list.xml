@@ -33,7 +33,7 @@
 
         <ImageButton
             android:background="@color/light_cyan"
-            android:id="@+id/Comida_Button_Pag_Inicial"
+            android:id="@+id/Despesa_Button_Pag_Inicial"
             android:layout_width="87dp"
             android:layout_height="85dp"
             android:layout_marginStart="10dp"
