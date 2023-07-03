@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 
-class ActivityCriarConta : AppCompatActivity() {
+class CriarConta : AppCompatActivity() {
 
     private val auth = FirebaseAuth.getInstance()
 

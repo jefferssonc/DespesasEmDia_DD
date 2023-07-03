@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
-import com.example.despesasemdia_dd.criarconta.ActivityCriarConta
+import com.example.despesasemdia_dd.criarconta.CriarConta
 import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.example.despesasemdia_dd.recuperarsenha.RecuperarSenha
 import com.google.android.material.snackbar.Snackbar
@@ -33,7 +33,7 @@ class LoginConta : AppCompatActivity() {
         val btcadastro = findViewById<Button>(R.id.btnCadastrarLoginConta)
 
         btcadastro.setOnClickListener {
-            val intent = Intent(this, ActivityCriarConta::class.java)
+            val intent = Intent(this, CriarConta::class.java)
             startActivity(intent)
         }
     }

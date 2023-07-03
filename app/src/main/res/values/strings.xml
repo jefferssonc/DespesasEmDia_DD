@@ -68,4 +68,7 @@
     <string name="criar">Criar</string>
     <string name="adicionar_pessoa_no_grupo">Adicionar Pessoa no Grupo</string>
     <string name="digite_o_email_do_novo_participante">Digite o email do novo participante</string>
+    <string name="comida">Comida</string>
+    <string name="r_10_00">R$ 10.00</string>
+    <string name="botao_para_deletar_despesa">Botao para deletar despesa</string>
 </resources>
