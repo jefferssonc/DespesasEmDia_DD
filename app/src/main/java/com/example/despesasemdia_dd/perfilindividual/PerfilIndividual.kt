@@ -4,7 +4,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
+import com.example.despesasemdia_dd.adapter.AdapterPagInicial
+import com.example.despesasemdia_dd.adapter.AdapterPerfilIndividuall
+import com.example.despesasemdia_dd.model.Despesas
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -17,6 +22,37 @@ class PerfilIndividual : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
 
+        val recyclerView_PerfilInidividual = findViewById<RecyclerView>(R.id.recyclerViewPerfilIndividual)
+        recyclerView_PerfilInidividual.layoutManager = LinearLayoutManager(this)
+        recyclerView_PerfilInidividual.setHasFixedSize(true)
+        //configurando adapter
+        val listaPerfilIndividual :MutableList<Despesas> = mutableListOf()
+        val adapterPerfilIndividual = AdapterPerfilIndividuall(this,listaPerfilIndividual)
+        recyclerView_PerfilInidividual.adapter = adapterPerfilIndividual
+
+        //criando items da Despesa pag inicial
+
+        val despesa1 = Despesas(
+            "Comida",
+            null,
+            "300,20",
+            "23/04/12"
+        )
+        listaPerfilIndividual.add(despesa1)
+        val despesa2 = Despesas(
+            "Comida",
+            null,
+            "300,20",
+            "23/04/12"
+        )
+        listaPerfilIndividual.add(despesa2)
+        val despesa3 = Despesas(
+            "Comida",
+            null,
+            "300,20",
+            "23/04/12"
+        )
+        listaPerfilIndividual.add(despesa3)
     }
 
     @SuppressLint("SetTextI18n")

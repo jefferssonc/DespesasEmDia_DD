@@ -72,13 +72,13 @@
         app:layout_constraintTop_toBottomOf="@+id/senhaConfigConta" />
 
     <Button
-        android:id="@+id/btnDespesasConfigConta"
+        android:id="@+id/Sair"
         style="@style/button"
+        android:layout_width="162dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="176dp"
         android:background="@drawable/button_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/despesas"
+        android:text="Sair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/repitaSenhaConfigConta" />
@@ -108,4 +108,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnEditarConfigConta" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

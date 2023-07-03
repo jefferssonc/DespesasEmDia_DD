@@ -26,19 +26,22 @@ class PaginaInicial : AppCompatActivity() {
         val despesa1 = Despesas(
             "",
              R.drawable.comida_icon,
-            "300,20"
+            "300,20",
+            ""
         )
         listaPagIncial.add(despesa1)
         val despesa2 = Despesas(
             "",
             R.drawable.despesalazer_icon,
-            "300,20"
+            "300,20",
+            ""
         )
         listaPagIncial.add(despesa2)
         val despesa3 = Despesas(
             "",
             R.drawable.despesa_transporte_icon,
-            "300,20"
+            "300,20",
+            ""
         )
         listaPagIncial.add(despesa3)
     }
