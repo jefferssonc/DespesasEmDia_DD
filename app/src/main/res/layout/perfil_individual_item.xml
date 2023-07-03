@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/light_cyan"
-    android:layout_margin="20dp">
+    android:layout_margin="20dp"
+    android:elevation="2dp">
 
     <TextView
         android:id="@+id/despesasPerfilIndividual"
@@ -24,12 +25,14 @@
         android:id="@+id/valorPerfilIndividual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
         android:text="@string/r_10_00"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deletePerfilIndividual"
         app:layout_constraintStart_toEndOf="@+id/despesasPerfilIndividual"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,9 +40,9 @@
         android:id="@+id/dataPerfilIndividual"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/dd_mm_aaaa"
@@ -47,8 +50,7 @@
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toEndOf="@+id/valorPerfilIndividual"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -56,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="@color/light_cyan"
         android:contentDescription="@string/botao_para_deletar_despesa"
         app:layout_constraintBottom_toBottomOf="parent"
