@@ -49,9 +49,57 @@ class PaginaInicial : AppCompatActivity() {
                     val valor = document.getLong("Valor")
                     val nome = document.getString("Nome")
                     recyclerView_despesas_inicial.adapter = adapterPagInicial
-                    val despesa = Despesas(nome =nome.toString(), icon = null, preco = valor.toString(), data = null)
+                    val icone = when (nome.toString()) {
+                        "Alimentacao" -> {
+                                R.drawable.comida_icon
+                        }
+                        "Transporte" -> {
+                                R.drawable.despesa_transporte_icon
+                        }
+                        "Educacao" -> {
+                            R.drawable.despesaeducacao_icon
+                        }
+                        "Saude" -> {
+                            R.drawable.despesasaude_icon
+                        }
+                        "Lazer" -> {
+                            R.drawable.despesalazer_icon
+                        }
+                        "Residencia" -> {
+                            R.drawable.home_house_icon
+                        }
+                        else -> {
+                                R.drawable.despesaoutros_icon
+                        }
+                    }
 
+                    val despesa = Despesas(
+                        nome = nome.toString(),
+                        icon = icone,
+                        preco = valor.toString(),
+                        data = null
+                    )
                     listaPagIncial.add(despesa)
+
+//                    if (nome.toString() == "Alimentação") {
+//                        val despesa = Despesas(
+//                            nome = nome.toString(),
+//                            icon = R.drawable.comida_icon,
+//                            preco = valor.toString(),
+//                            data = null
+//                        )
+//                        listaPagIncial.add(despesa)
+//                    }
+//                    if (nome.toString() == "Transporte") {
+//                        val despesa = Despesas(
+//                            nome = nome.toString(),
+//                            icon = R.drawable.despesa_transporte_icon,
+//                            preco = valor.toString(),
+//                            data = null
+//                        )
+//                        listaPagIncial.add(despesa)
+//                    }
+
                 }
             }
     }
