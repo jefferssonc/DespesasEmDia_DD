@@ -32,7 +32,7 @@
         android:text="@string/r_10_00"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/deletePerfilIndividual"
+        app:layout_constraintEnd_toStartOf="@+id/iconePagInicial"
         app:layout_constraintStart_toEndOf="@+id/despesasPerfilIndividual"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/deletePerfilIndividual"
+        android:id="@+id/iconePagInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

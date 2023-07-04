@@ -9,7 +9,7 @@
     android:elevation="2dp">
 
     <TextView
-        android:id="@+id/despesasPerfilIndividual"
+        android:id="@+id/despesasPaginaInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -18,12 +18,12 @@
         android:text="@string/comida"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/deletePerfilIndividual"
+        app:layout_constraintStart_toEndOf="@+id/iconePagInicial"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.49" />
 
     <ImageButton
-        android:id="@+id/deletePerfilIndividual"
+        android:id="@+id/iconePagInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"

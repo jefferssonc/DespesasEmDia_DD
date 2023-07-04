@@ -27,7 +27,7 @@ class AdapterPerfil(private val context : Context, private val despesaPerfil:Mut
     inner class PerfilViewHolder (itemView : View):RecyclerView.ViewHolder(itemView){
 
          val categoria = itemView.findViewById<TextView>(R.id.despesasPerfilIndividual)
-         val botao  = itemView.findViewById<ImageButton>(R.id.deletePerfilIndividual)
+         val botao  = itemView.findViewById<ImageButton>(R.id.iconePagInicial)
          val dataDespe = itemView.findViewById<TextView>(R.id.dataPerfilIndividual)
          val valorDespesa = itemView.findViewById<TextView>(R.id.valorPerfilIndividual)
         fun bind(despesa : DespesaIndividual){

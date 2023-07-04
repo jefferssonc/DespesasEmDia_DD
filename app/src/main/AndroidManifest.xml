@@ -28,9 +28,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".perfilindividual.PerfilIndividual"
-            android:exported="false" />
-        <activity
             android:name=".recuperarsenha.RecuperarSenha"
             android:exported="false" />
         <activity
@@ -49,7 +46,7 @@
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".paginainicial.PaginaInicial"
+            android:name=".perfilindividual.PerfilIndividual"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
