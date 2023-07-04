@@ -15,7 +15,7 @@ class AdapterPagInicial(private val context: Context,private val items: MutableL
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PerfilViewHolder {
         //Cria a visualização
-        val itemLista = LayoutInflater.from(context).inflate(R.layout.perfil_individual_item,parent,false)
+        val itemLista = LayoutInflater.from(context).inflate(R.layout.pag_inicial_list,parent,false)
         val holder = PerfilViewHolder(itemLista)
         return holder
     }

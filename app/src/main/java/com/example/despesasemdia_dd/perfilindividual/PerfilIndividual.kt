@@ -22,7 +22,7 @@ class PerfilIndividual : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
 
-        val recyclerView_PerfilInidividual = findViewById<RecyclerView>(R.id.recyclerViewPerfilIndividual)
+        val recyclerView_PerfilInidividual = findViewById<RecyclerView>(R.id.perfilindividual)
         recyclerView_PerfilInidividual.layoutManager = LinearLayoutManager(this)
         recyclerView_PerfilInidividual.setHasFixedSize(true)
         //configurando adapter
