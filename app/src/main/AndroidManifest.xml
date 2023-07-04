@@ -19,6 +19,9 @@
             android:name=".despesasgrupo.DespesasGrupo"
             android:exported="false" />
         <activity
+            android:name=".adicionardespesa.AdicionarDespesa"
+            android:exported="false" />
+        <activity
             android:name=".despesa.Despesa"
             android:exported="false" />
         <activity
