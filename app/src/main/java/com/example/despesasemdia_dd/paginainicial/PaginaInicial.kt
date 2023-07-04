@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.adapter.AdapterPagInicial
+import com.example.despesasemdia_dd.adicionardespesa.AdicionarDespesa
+import com.example.despesasemdia_dd.configconta.ConfigConta
 import com.example.despesasemdia_dd.model.Despesas
 import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.google.firebase.auth.FirebaseAuth
@@ -24,8 +26,9 @@ class PaginaInicial : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pagina_inicial)
 
-        somaDespesa()
         irParaPerfil()
+        irParaConfg()
+        irParaAdd()
 
 
         val recyclerView_despesas_inicial = findViewById<RecyclerView>(R.id.recyclerView_despesas_inicial)
@@ -81,10 +84,29 @@ class PaginaInicial : AppCompatActivity() {
         }
     }
 
+    private fun irParaAdd(){
+        val btvoltar = findViewById<ImageButton>(R.id.imageButton6)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, AdicionarDespesa::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun irParaConfg(){
+        val btvoltar = findViewById<ImageButton>(R.id.imageButton9)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, ConfigConta::class.java)
+            startActivity(intent)
+        }
+    }
+
     override fun onStart() {
         super.onStart()
         val txtnome = findViewById<TextView>(R.id.textView21)
         val username = user?.displayName
         txtnome.text = username
+        somaDespesa()
     }
 }

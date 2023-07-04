@@ -46,16 +46,16 @@
             android:name=".configconta.ConfigConta"
             android:exported="false" />
         <activity
-            android:name=".loginconta.LoginConta"
+            android:name=".perfilindividual.PerfilIndividual"
             android:exported="false" />
         <activity
-            android:name=".criarconta.ActivityCriarConta"
+            android:name=".criarconta.CriarConta"
             android:exported="false" />
         <activity
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".perfilindividual.PerfilIndividual"
+            android:name=".loginconta.LoginConta"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
