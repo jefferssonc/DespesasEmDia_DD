@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.despesaunica.DespesaUnica">
+    tools:context=".despesaunica.DespesaUnica">
 
     <View
         android:background="@color/light_cyan"
@@ -32,10 +32,10 @@
         android:id="@+id/textView23"
         android:layout_width="86dp"
         android:layout_height="25dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="92dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view13" />
 
@@ -58,5 +58,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/activity_despesa_unica" />
+        tools:listitem="@layout/pag_despesa_unica_list"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

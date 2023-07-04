@@ -8,7 +8,6 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.configconta.ConfigConta
-import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth

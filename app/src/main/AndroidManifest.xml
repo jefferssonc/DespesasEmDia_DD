@@ -13,13 +13,13 @@
         android:theme="@style/Theme.DespesasEmDia_DD"
         tools:targetApi="31">
         <activity
-            android:name="com.example.despesaunica.DespesaUnica"
+            android:name=".despesaunica.DespesaUnica"
             android:exported="false" />
         <activity
             android:name=".despesasgrupo.DespesasGrupo"
             android:exported="false" />
         <activity
-            android:name=".despesa.Despesa"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".criargrupo.CriarGrupo"
@@ -32,9 +32,6 @@
             android:exported="false" />
         <activity
             android:name=".paginainicial.PaginaInicial"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".recuperarsenha.RecuperarSenha"
@@ -55,7 +52,7 @@
             android:name=".atualizarconta.AtualizarConta"
             android:exported="false" />
         <activity
-            android:name=".perfilindividual.PerfilIndividual"
+            android:name=".despesa.Despesa"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

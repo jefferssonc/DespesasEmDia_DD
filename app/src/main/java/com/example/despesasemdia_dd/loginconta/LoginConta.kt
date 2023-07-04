@@ -8,7 +8,6 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.criarconta.ActivityCriarConta
-import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.example.despesasemdia_dd.recuperarsenha.RecuperarSenha
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
@@ -23,13 +22,13 @@ class LoginConta : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_conta)
 
-        login()
+        /*login()
         enviarParaCadastro()
         enviarParaRecsenha()
-
+*/
 
     }
-    private fun enviarParaCadastro(){
+    /*private fun enviarParaCadastro(){
         val btcadastro = findViewById<Button>(R.id.btnCadastrarLoginConta)
 
         btcadastro.setOnClickListener {
@@ -63,11 +62,11 @@ class LoginConta : AppCompatActivity() {
             }
         }
     }
-    private fun mudarParaPrincipal(){
+    /*private fun mudarParaPrincipal(){
         val intent = Intent(this, PerfilIndividual::class.java)
         startActivity(intent)
         finish()
-    }
+    }*/
     private fun enviarParaRecsenha(){
         val btcadastro = findViewById<Button>(R.id.btnRecuperarSenhaLoginConta)
 
@@ -85,5 +84,5 @@ class LoginConta : AppCompatActivity() {
 //        if (usuarioLogado != null){
 //            mudarParaPrincipal()
 //        }
-//    }
+//    }*/
 }
