@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageButton10"
         app:layout_constraintTop_toTopOf="@+id/imageButton10"
         app:layout_constraintVertical_bias="0.507"
-        app:srcCompat="@drawable/despesa_transporte_icon"
+        app:srcCompat="@drawable/despesas_icon"
         android:contentDescription="Foto da despesa" />
 
     <TextView

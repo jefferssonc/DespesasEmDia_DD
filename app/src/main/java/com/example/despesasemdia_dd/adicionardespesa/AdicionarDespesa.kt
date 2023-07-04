@@ -1,11 +1,13 @@
 package com.example.despesasemdia_dd.adicionardespesa
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
+import com.example.despesasemdia_dd.paginainicial.PaginaInicial
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -19,7 +21,7 @@ class AdicionarDespesa : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_adicionar_despesa)
 
-  //      voltarParaInicial()
+        voltarParaInicial()
 
         val valor = findViewById<EditText>(R.id.editTextText2)
         val categoria = findViewById<EditText>(R.id.editTextText3)
@@ -32,7 +34,7 @@ class AdicionarDespesa : AppCompatActivity() {
                 "Nome" to categoria.text.toString(),
                 "Conta" to user?.displayName
             )
-        db.collection("Despesas").document(categoria.text.toString())
+        db.collection("Despesas").document()
             .set(usersmap).addOnCompleteListener {
                 val snackbar = Snackbar.make(view, "Despesa adicionada", Snackbar.LENGTH_SHORT)
                 snackbar.setBackgroundTint(Color.GREEN)
@@ -41,13 +43,12 @@ class AdicionarDespesa : AppCompatActivity() {
             }
         }
     }
-//    private fun voltarParaInicial(){
-//        val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
-//
-//        btvoltar.setOnClickListener{view ->
-//            val intent = Intent(this, PaginaInicial::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
+    private fun voltarParaInicial(){
+        val btvoltar = findViewById<ImageButton>(R.id.imageButton2)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, PaginaInicial::class.java)
+            startActivity(intent)
+        }
+    }
 }
