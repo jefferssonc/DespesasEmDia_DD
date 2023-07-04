@@ -8,7 +8,6 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.configconta.ConfigConta
-import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
@@ -17,11 +16,11 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 
-class ActivityCriarConta : AppCompatActivity() {
+class CriarConta : AppCompatActivity() {
 
     private val auth = FirebaseAuth.getInstance()
 
-    //private val db = FirebaseFirestore.getInstance()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,20 +39,14 @@ class ActivityCriarConta : AppCompatActivity() {
 
         btcriar_conta.setOnClickListener { view ->
             if (nome_user.text.isNotBlank() || email.text.isNotBlank() || senha.text.isNotBlank() || rep_senha.text.isNotBlank()) {
-//                val usersmap = hashMapOf(
-//                    "email" to email.text.toString(),
-//                    "senha" to senha.text.toString(),
-//                    "nome" to nome_user.text.toString()
-//                )
-//                db.collection("Usuários").document(email.text.toString())
-//                    .set(usersmap).addOnFailureListener {
-//
-//                    }
-                auth.createUserWithEmailAndPassword(email.text.toString(), senha.text.toString())
-                    .addOnCompleteListener {
+                if(senha.text.toString() == rep_senha.text.toString()) {
+                    auth.createUserWithEmailAndPassword(
+                        email.text.toString(),
+                        senha.text.toString()
+                    ).addOnCompleteListener {
                         if (it.isSuccessful) {
 
-                            auth.signInWithEmailAndPassword(email.text.toString(), senha.text.toString()).addOnCompleteListener {login->
+                            auth.signInWithEmailAndPassword(email.text.toString(), senha.text.toString()).addOnCompleteListener { login ->
                                 if (login.isSuccessful) {
                                     val user = FirebaseAuth.getInstance().currentUser
                                     val profileUpdates = userProfileChangeRequest {
@@ -79,6 +72,11 @@ class ActivityCriarConta : AppCompatActivity() {
                         snackbar.setBackgroundTint(Color.RED)
                         snackbar.show()
                     }
+                }else{
+                    val snackbar = Snackbar.make(view, "As senhas não correspondem", Snackbar.LENGTH_SHORT)
+                    snackbar.setBackgroundTint(Color.RED)
+                    snackbar.show()
+                }
             }
         }
     }

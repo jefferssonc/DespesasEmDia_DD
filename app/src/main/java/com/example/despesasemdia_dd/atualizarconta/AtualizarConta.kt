@@ -39,29 +39,34 @@ class AtualizarConta : AppCompatActivity() {
     private fun atualizaEmail(email: String, senha: String, nome: String) {
 
         user!!.updateEmail(email).addOnCompleteListener {
+            if(it.isSuccessful){
+                user.updatePassword(senha).addOnCompleteListener {
 
-            user.updatePassword(senha).addOnCompleteListener {
-
-                val profileUpdates = userProfileChangeRequest {
-                displayName = nome
-        }
-        user.updateProfile(profileUpdates).addOnFailureListener { exception ->
-            val erro = when (exception) {
-                is FirebaseNetworkException -> "Sem conexão com a internet"
-                else -> "Erro ao atualizar nome"
+                    val profileUpdates = userProfileChangeRequest {
+                    displayName = nome
             }
-            mensagem(erro)
-        }
-
-            }.addOnFailureListener { exception ->
-            val erro = when (exception) {
-                is FirebaseAuthWeakPasswordException -> "Senha deve ter pelo menos 6 digítos"
-                is FirebaseNetworkException -> "Sem conexão com a internet"
-                else -> "Erro ao atualizar senha"
+            user.updateProfile(profileUpdates).addOnFailureListener { exception ->
+                val erro = when (exception) {
+                    is FirebaseNetworkException -> "Sem conexão com a internet"
+                    else -> "Erro ao atualizar nome"
+                }
+                mensagem(erro)
             }
-            mensagem(erro)
-        }
 
+                }.addOnFailureListener { exception ->
+                val erro = when (exception) {
+                    is FirebaseAuthWeakPasswordException -> "Senha deve ter pelo menos 6 digítos"
+                    is FirebaseNetworkException -> "Sem conexão com a internet"
+                    else -> "Erro ao atualizar senha"
+                }
+                mensagem(erro)
+            }
+
+                val snackbar =
+                    Snackbar.make(findViewById(android.R.id.content), "As informações foram atualizadas", Snackbar.LENGTH_SHORT)
+                snackbar.setBackgroundTint(Color.GREEN)
+                snackbar.show()
+            }
         }.addOnFailureListener { exception ->
             val erro = when (exception) {
                 is FirebaseAuthUserCollisionException -> "Email já cadastrado"
@@ -72,32 +77,6 @@ class AtualizarConta : AppCompatActivity() {
             mensagem(erro)
         }
     }
-
-//    private fun atualizaSenha(senha: String) {
-//
-//        user!!.updatePassword(senha).addOnFailureListener { exception ->
-//            val erro = when (exception) {
-//                is FirebaseAuthWeakPasswordException -> "Senha deve ter pelo menos 6 digítos"
-//                is FirebaseNetworkException -> "Sem conexão com a internet"
-//                else -> "Erro ao atualizar senha"
-//            }
-//            mensagem(erro)
-//        }
-//    }
-//
-//    private fun atualizaNome(nome: String) {
-//
-//        val profileUpdates = userProfileChangeRequest {
-//            displayName = nome
-//        }
-//        user!!.updateProfile(profileUpdates).addOnFailureListener { exception ->
-//            val erro = when (exception) {
-//                is FirebaseNetworkException -> "Sem conexão com a internet"
-//                else -> "Erro ao atualizar nome"
-//            }
-//            mensagem(erro)
-//        }
-//    }
 
     private fun mensagem(erro: String) {
         val snackbar =
