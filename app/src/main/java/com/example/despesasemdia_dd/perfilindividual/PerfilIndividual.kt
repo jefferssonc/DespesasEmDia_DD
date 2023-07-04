@@ -1,15 +1,17 @@
 package com.example.despesasemdia_dd.perfilindividual
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
-import com.example.despesasemdia_dd.adapter.AdapterPagInicial
 import com.example.despesasemdia_dd.adapter.AdapterPerfilIndividuall
 import com.example.despesasemdia_dd.model.Despesas
+import com.example.despesasemdia_dd.paginainicial.PaginaInicial
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -21,6 +23,8 @@ class PerfilIndividual : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
+
+        voltarParaPrincipal()
 
         val recyclerView_PerfilInidividual = findViewById<RecyclerView>(R.id.perfilindividual)
         recyclerView_PerfilInidividual.layoutManager = LinearLayoutManager(this)
@@ -78,15 +82,14 @@ class PerfilIndividual : AppCompatActivity() {
     }
 
 
-//    private fun voltarParaPrincipal(voltar: String){
-//        val btvoltar = findViewById<Button>(R.id.imageView5)
-//
-//        btvoltar.setOnClickListener{view ->
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
+    private fun voltarParaPrincipal(){
+        val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, PaginaInicial::class.java)
+            startActivity(intent)
+        }
+    }
 
         override fun onStart() {
             super.onStart()
