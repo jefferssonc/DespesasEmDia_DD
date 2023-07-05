@@ -27,7 +27,7 @@
                 android:id="@+id/despesaPagDespesas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alimentação"
+                android:text="@string/alimenta_o"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

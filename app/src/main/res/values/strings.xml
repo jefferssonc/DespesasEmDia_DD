@@ -79,4 +79,6 @@
     <string name="total_10_99">Total 10.99</string>
     <string name="r_10265_12">R$ 10265.12</string>
     <string name="dd_mm_aa">dd/mm/AA</string>
+    <string name="alimentacao">Alimentacao</string>
+    <string name="alimenta_o">Alimentação</string>
 </resources>
