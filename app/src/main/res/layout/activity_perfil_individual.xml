@@ -16,17 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="71dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/cone_que_representa_o_usu_rio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:srcCompat="@drawable/userlogo" />
-
     <TextView
         android:id="@+id/NomeUserPerfIndividual"
         android:layout_width="wrap_content"
@@ -41,7 +30,7 @@
         android:id="@+id/despesaTotalPerfilIndividual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="20dp"
         android:text="@string/despesa_total_r_0_00"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,13 +41,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="20dp"
         android:text="@string/hist_rico_de_gastos"
         android:textColor="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/despesaTotalPerfilIndividual" />
-
 
 
     <ImageButton
@@ -70,23 +58,82 @@
         android:backgroundTint="@color/light_cyan"
         android:contentDescription="@string/bot_o_para_voltar_na_tela_anterior"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/perfilindividual"
-        android:layout_width="383dp"
-        android:layout_height="360dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="10dp"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:listitem="@layout/pag_perfil_individual_list"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPerfilIndividual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnAdicionarDespesaPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/snow"
+        android:contentDescription="@string/botao_para_adicionar_despesa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRelatorioDespesaPerfil"
+        app:layout_constraintStart_toEndOf="@+id/btnHomePerfil"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:srcCompat="@drawable/adicionar_icon" />
+
+    <ImageButton
+        android:id="@+id/btnRelatorioDespesaPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/snow"
+        android:contentDescription="@string/botao_para_despesas_mais_detalhadas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:srcCompat="@drawable/despesas_icon" />
+
+    <ImageButton
+        android:id="@+id/btnHomePerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/snow"
+        android:contentDescription="@string/botao_de_voltar_para_o_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:srcCompat="@drawable/house_main_menu_icon" />
+
+    <ImageButton
+        android:id="@+id/btnCrudUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/light_cyan"
+        android:contentDescription="@string/botao_em_forma_de_icone_para_navegar_para_o_crud_do_user"
+        app:layout_constraintBottom_toTopOf="@+id/NomeUserPerfIndividual"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltarPerfilIndividual"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.416"
+        app:srcCompat="@drawable/userlogo_pequeno" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

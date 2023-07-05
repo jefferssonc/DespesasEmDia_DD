@@ -77,4 +77,15 @@
     <string name="comida">Comida</string>
     <string name="r_10_00">R$ 10.00</string>
     <string name="botao_para_deletar_despesa">Botao para deletar despesa</string>
+    <string name="botao_de_voltar_para_o_home">Botao de voltar para o home</string>
+    <string name="botao_para_adicionar_despesa">Botao para adicionar despesa</string>
+    <string name="botao_para_despesas_mais_detalhadas">Botao para despesas mais detalhadas</string>
+    <string name="botao_para_voltar_para_tela_anterior">Botao para voltar para tela anterior</string>
+    <string name="categoriadespesa">CategoriaDespesa</string>
+    <string name="total_10_99">Total 10.99</string>
+    <string name="r_10265_12">R$ 10265.12</string>
+    <string name="dd_mm_aa">dd/mm/AA</string>
+    <string name="alimentacao">Alimentacao</string>
+    <string name="alimenta_o">Alimentação</string>
+    <string name="botao_em_forma_de_icone_para_navegar_para_o_crud_do_user">Botao em forma de icone para navegar para o crud do user</string>
 </resources>

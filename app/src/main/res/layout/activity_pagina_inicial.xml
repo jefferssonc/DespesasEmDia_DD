@@ -7,86 +7,130 @@
     tools:context=".paginainicial.PaginaInicial">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_despesas_inicial"
-        android:layout_width="400dp"
-        android:layout_height="318dp"
-        app:layout_constraintBottom_toTopOf="@+id/view4"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="347dp"
+        android:layout_height="229dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:listitem="@layout/pag_inicial_list" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/light_cyan"
+            android:id="@+id/recyclerView_despesas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
 
     <View
-        android:id="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        android:layout_width="356dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/light_cyan"
+        android:id="@+id/view3"
+        android:layout_width="293dp"
+        android:layout_height="128dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/despesaPagDespesas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
         android:text="Gasto Total"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintStart_toStartOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintTop_toTopOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <View
         android:id="@+id/view4"
-        android:layout_width="410dp"
-        android:layout_height="88dp"
+        android:layout_width="416dp"
+        android:layout_height="83dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/view5"
-        android:layout_width="413dp"
-        android:layout_height="114dp"
-        android:background="@color/light_cyan"
-        app:cardCornerRadius="20dp"
+        android:layout_width="410dp"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/msg_de_bemvindo"
-        android:layout_width="104dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/msg_de_bemvindo"
-        android:textSize="20sp"
+        android:id="@+id/textView"
+        android:layout_width="54dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="164dp"
+        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="@+id/view5"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
         app:layout_constraintTop_toTopOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <TextView
-        android:id="@+id/GASTO_TOTAL_PAG_INICIAL"
-        android:layout_width="152dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="48dp"
-        android:text="R$ 3000"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintEnd_toEndOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toEndOf="@+id/textView2" />
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toEndOf="@+id/despesaPagDespesas"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:background="@color/white"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/users_group_people_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:background="@color/white"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/despesas_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:background="@color/white"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/house_main_menu_icon" />
 
     <ImageButton
         android:id="@+id/imageButton6"
@@ -100,86 +144,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
         app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/adicionar_icon" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:background="@color/white"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.35"
-        app:srcCompat="@drawable/house_main_menu_icon" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:background="@color/white"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.35"
-        app:srcCompat="@drawable/despesas_icon" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:background="@color/white"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.35"
-        app:srcCompat="@drawable/users_group_people_icon" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Historico de despesas"
-        android:textColor="@color/chinese_silver"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="@+id/View_Do_Gasto_Total_PAG_INICIAL"
-        app:layout_constraintTop_toBottomOf="@+id/View_Do_Gasto_Total_PAG_INICIAL" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/nomeuser"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toEndOf="@+id/msg_de_bemvindo"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.562" />
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="60dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="12dp"
-        android:background="@color/light_cyan"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.573"
-        app:srcCompat="@drawable/list_icon"
-        android:importantForAccessibility="no" />
+        app:srcCompat="@drawable/userlogo_medio"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
