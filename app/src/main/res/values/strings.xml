@@ -81,4 +81,5 @@
     <string name="dd_mm_aa">dd/mm/AA</string>
     <string name="alimentacao">Alimentacao</string>
     <string name="alimenta_o">Alimentação</string>
+    <string name="botao_em_forma_de_icone_para_navegar_para_o_crud_do_user">Botao em forma de icone para navegar para o crud do user</string>
 </resources>
