@@ -77,4 +77,6 @@
     <string name="botao_para_voltar_para_tela_anterior">Botao para voltar para tela anterior</string>
     <string name="categoriadespesa">CategoriaDespesa</string>
     <string name="total_10_99">Total 10.99</string>
+    <string name="r_10265_12">R$ 10265.12</string>
+    <string name="dd_mm_aa">dd/mm/AA</string>
 </resources>
