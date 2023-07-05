@@ -28,36 +28,20 @@ class AdicionarDespesa : AppCompatActivity() {
         val btadicionar = findViewById<ImageButton>(R.id.imageButton)
 
         btadicionar.setOnClickListener { view ->
-            val documentRef = db.collection("Despesas").document(categoria.text.toString())
             val texto = valor.text.toString()
-            documentRef.get().addOnSuccessListener { documentSnapshot ->
-                if (documentSnapshot.exists()) {
-                    val valorExistente = documentSnapshot.getDouble("Valor") ?: 0.0
-                    val valorAtual = texto.toDoubleOrNull() ?: 0.0
-                    val resultado = valorExistente + valorAtual
-                    documentRef.update("Valor", resultado)
-                    val snackbar =
-                        Snackbar.make(view, "Despesa atualizada", Snackbar.LENGTH_SHORT)
-                    snackbar.setBackgroundTint(Color.GREEN)
-                    snackbar.show()
-                }else{
+
                     val usersmap = hashMapOf(
                         "Valor" to texto.toDoubleOrNull(),
                         "Nome" to categoria.text.toString(),
                         "Conta" to user?.displayName
                     )
-                    db.collection("Despesas")
-                        .document(categoria.text.toString() + user?.displayName)
+                    db.collection("Despesas").document()
                         .set(usersmap).addOnCompleteListener {
                             val snackbar =
                                 Snackbar.make(view, "Despesa adicionada", Snackbar.LENGTH_SHORT)
                             snackbar.setBackgroundTint(Color.GREEN)
                             snackbar.show()
                         }
-                }
-
-            }
-
 
         }
     }
