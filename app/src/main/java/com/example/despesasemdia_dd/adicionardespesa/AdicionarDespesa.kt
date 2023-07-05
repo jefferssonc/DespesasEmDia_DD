@@ -27,20 +27,38 @@ class AdicionarDespesa : AppCompatActivity() {
         val categoria = findViewById<EditText>(R.id.editTextText3)
         val btadicionar = findViewById<ImageButton>(R.id.imageButton)
 
-        btadicionar.setOnClickListener {view->
+        btadicionar.setOnClickListener { view ->
+            val documentRef = db.collection("Despesas").document(categoria.text.toString())
             val texto = valor.text.toString()
-            val usersmap = hashMapOf(
-                "Valor" to texto.toDoubleOrNull(),
-                "Nome" to categoria.text.toString(),
-                "Conta" to user?.displayName
-            )
-        db.collection("Despesas").document()
-            .set(usersmap).addOnCompleteListener {
-                val snackbar = Snackbar.make(view, "Despesa adicionada", Snackbar.LENGTH_SHORT)
-                snackbar.setBackgroundTint(Color.GREEN)
-                snackbar.show()
+            documentRef.get().addOnSuccessListener { documentSnapshot ->
+                if (documentSnapshot.exists()) {
+                    val valorExistente = documentSnapshot.getDouble("Valor") ?: 0.0
+                    val valorAtual = texto.toDoubleOrNull() ?: 0.0
+                    val resultado = valorExistente + valorAtual
+                    documentRef.update("Valor", resultado)
+                    val snackbar =
+                        Snackbar.make(view, "Despesa atualizada", Snackbar.LENGTH_SHORT)
+                    snackbar.setBackgroundTint(Color.GREEN)
+                    snackbar.show()
+                }else{
+                    val usersmap = hashMapOf(
+                        "Valor" to texto.toDoubleOrNull(),
+                        "Nome" to categoria.text.toString(),
+                        "Conta" to user?.displayName
+                    )
+                    db.collection("Despesas")
+                        .document(categoria.text.toString() + user?.displayName)
+                        .set(usersmap).addOnCompleteListener {
+                            val snackbar =
+                                Snackbar.make(view, "Despesa adicionada", Snackbar.LENGTH_SHORT)
+                            snackbar.setBackgroundTint(Color.GREEN)
+                            snackbar.show()
+                        }
+                }
 
             }
+
+
         }
     }
     private fun voltarParaInicial(){

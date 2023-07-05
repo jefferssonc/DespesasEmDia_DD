@@ -77,13 +77,13 @@ class LoginConta : AppCompatActivity() {
         }
     }
 
-//    override fun onStart() {
-//        super.onStart()
-//
-//        val usuarioLogado = FirebaseAuth.getInstance().currentUser
-//
-//        if (usuarioLogado != null){
-//            mudarParaPrincipal()
-//        }
-//    }
+    override fun onStart() {
+        super.onStart()
+
+        val usuarioLogado = FirebaseAuth.getInstance().currentUser
+
+        if (usuarioLogado != null){
+            mudarParaPrincipal()
+        }
+    }
 }
