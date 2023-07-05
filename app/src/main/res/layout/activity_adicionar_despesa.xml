@@ -9,7 +9,7 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="419dp"
+        android:layout_width="0dp"
         android:layout_height="407dp"
         android:background="@color/bubbles"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,13 +26,13 @@
         android:layout_marginTop="68dp"
         android:contentDescription="@string/valor"
         android:text="@string/valor"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintEnd_toStartOf="@+id/inputValorDespesa"
         app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/inputValorDespesa"
         style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/inputCategoriaDespesa"
         style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/inputValorDespesa"
         app:layout_constraintVertical_bias="0.181" />
 
     <TextView
@@ -78,21 +78,22 @@
         android:contentDescription="@string/categoria"
         android:text="@string/categoria"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+        app:layout_constraintEnd_toStartOf="@+id/inputCategoriaDespesa"
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="@+id/view2" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnAdicionarDespesaAdicionar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/bubbles"
         android:contentDescription="@string/bot_o_de_adicionar_despesa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
         app:srcCompat="@drawable/adicionar_icon" />
 
     <ImageButton
@@ -108,5 +109,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageButton
+        android:id="@+id/btnRelatorioDespesaDespesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/bubbles"
+        android:contentDescription="@string/botao_para_despesas_mais_detalhadas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdicionarDespesaAdicionar"
+        app:layout_constraintStart_toEndOf="@+id/btnHomeDespesaDespesa"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:srcCompat="@drawable/despesas_icon" />
+
+    <ImageButton
+        android:id="@+id/btnHomeDespesaDespesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/bubbles"
+        android:contentDescription="@string/botao_de_voltar_para_o_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:srcCompat="@drawable/house_main_menu_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
