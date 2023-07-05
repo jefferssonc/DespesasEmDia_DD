@@ -23,9 +23,9 @@ class AdicionarDespesa : AppCompatActivity() {
 
         voltarParaInicial()
 
-        val valor = findViewById<EditText>(R.id.editTextText2)
-        val categoria = findViewById<EditText>(R.id.editTextText3)
-        val btadicionar = findViewById<ImageButton>(R.id.imageButton)
+        val valor = findViewById<EditText>(R.id.inputValorDespesa)
+        val categoria = findViewById<EditText>(R.id.inputCategoriaDespesa)
+        val btadicionar = findViewById<ImageButton>(R.id.btnAdicionarDespesaAdicionar)
 
         btadicionar.setOnClickListener { view ->
             val texto = valor.text.toString()

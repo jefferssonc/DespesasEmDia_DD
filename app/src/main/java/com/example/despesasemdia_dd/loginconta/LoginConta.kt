@@ -8,7 +8,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.criarconta.CriarConta
-import com.example.despesasemdia_dd.paginainicial.PaginaInicial
+import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.example.despesasemdia_dd.recuperarsenha.RecuperarSenha
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
@@ -64,7 +64,7 @@ class LoginConta : AppCompatActivity() {
         }
     }
     private fun mudarParaPrincipal(){
-        val intent = Intent(this, PaginaInicial::class.java)
+        val intent = Intent(this, PerfilIndividual::class.java)
         startActivity(intent)
         finish()
     }

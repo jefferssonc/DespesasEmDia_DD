@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.adapter.AdapterPerfil
+import com.example.despesasemdia_dd.adicionardespesa.AdicionarDespesa
+import com.example.despesasemdia_dd.configconta.ConfigConta
 import com.example.despesasemdia_dd.model.DespesaIndividual
-import com.example.despesasemdia_dd.paginainicial.PaginaInicial
+import com.example.despesasemdia_dd.model.Despesas
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -24,9 +26,12 @@ class PerfilIndividual : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_individual)
 
-        voltarParaPrincipal()
+        //voltarParaPrincipal()
+        irParaAdd()
+        irParaDespesa()
+        irParaConfig()
 
-        val recyclerView_PerfilIndividual = findViewById<RecyclerView>(R.id.perfilindividual)
+        val recyclerView_PerfilIndividual = findViewById<RecyclerView>(R.id.recyclerViewPerfilIndividual)
         recyclerView_PerfilIndividual.layoutManager = LinearLayoutManager(this)
         recyclerView_PerfilIndividual.setHasFixedSize(true)
 
@@ -78,21 +83,48 @@ class PerfilIndividual : AppCompatActivity() {
     }
 
 
-    private fun voltarParaPrincipal(){
-        val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
+//    private fun voltarParaPrincipal(){
+//        val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
+//
+//        btvoltar.setOnClickListener{view ->
+//            val intent = Intent(this, PaginaInicial::class.java)
+//            startActivity(intent)
+//        }
+//    }
 
-        btvoltar.setOnClickListener{view ->
-            val intent = Intent(this, PaginaInicial::class.java)
+    private fun irParaAdd() {
+        val btvoltar = findViewById<ImageButton>(R.id.btnAdicionarDespesaPerfil)
+
+        btvoltar.setOnClickListener { view ->
+            val intent = Intent(this, AdicionarDespesa::class.java)
             startActivity(intent)
         }
     }
 
-        override fun onStart() {
-            super.onStart()
-            val txtnome = findViewById<TextView>(R.id.NomeUserPerfIndividual)
-            val username = user?.displayName
-            txtnome.text = username
-            somaDespesa()
+    private fun irParaDespesa() {
+        val btvoltar = findViewById<ImageButton>(R.id.btnRelatorioDespesaPerfil)
+
+        btvoltar.setOnClickListener { view ->
+            val intent = Intent(this, Despesas::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun irParaConfig(){
+        val btvoltar = findViewById<ImageButton>(R.id.btnCrudUser)
+
+        btvoltar.setOnClickListener { view ->
+            val intent = Intent(this, ConfigConta::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val txtnome = findViewById<TextView>(R.id.NomeUserPerfIndividual)
+        val username = user?.displayName
+        txtnome.text = username
+        somaDespesa()
     }
 
 }
