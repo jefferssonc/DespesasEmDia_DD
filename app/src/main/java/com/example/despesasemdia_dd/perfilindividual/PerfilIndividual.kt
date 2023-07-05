@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
-import com.example.despesasemdia_dd.adapter.AdapterPerfilIndividuall
-import com.example.despesasemdia_dd.model.Despesas
+import com.example.despesasemdia_dd.adapter.AdapterPerfil
+import com.example.despesasemdia_dd.model.DespesaIndividual
 import com.example.despesasemdia_dd.paginainicial.PaginaInicial
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -26,37 +26,33 @@ class PerfilIndividual : AppCompatActivity() {
 
         voltarParaPrincipal()
 
-        val recyclerView_PerfilInidividual = findViewById<RecyclerView>(R.id.perfilindividual)
-        recyclerView_PerfilInidividual.layoutManager = LinearLayoutManager(this)
-        recyclerView_PerfilInidividual.setHasFixedSize(true)
-        //configurando adapter
-        val listaPerfilIndividual :MutableList<Despesas> = mutableListOf()
-        val adapterPerfilIndividual = AdapterPerfilIndividuall(this,listaPerfilIndividual)
-        recyclerView_PerfilInidividual.adapter = adapterPerfilIndividual
+        val recyclerView_PerfilIndividual = findViewById<RecyclerView>(R.id.perfilindividual)
+        recyclerView_PerfilIndividual.layoutManager = LinearLayoutManager(this)
+        recyclerView_PerfilIndividual.setHasFixedSize(true)
 
-        //criando items da Despesa pag inicial
+        //Configurar o adapter
+        val itens_Perfil:MutableList<DespesaIndividual> = mutableListOf()
+        val adapter_Individual = AdapterPerfil(this,itens_Perfil )
+        //recyclerView_PerfilIndividual.adapter = adapter_Individual
 
-        val despesa1 = Despesas(
-            "Comida",
-            null,
-            "300,20",
-            "23/04/12"
-        )
-        listaPerfilIndividual.add(despesa1)
-        val despesa2 = Despesas(
-            "Comida",
-            null,
-            "300,20",
-            "23/04/12"
-        )
-        listaPerfilIndividual.add(despesa2)
-        val despesa3 = Despesas(
-            "Comida",
-            null,
-            "300,20",
-            "23/04/12"
-        )
-        listaPerfilIndividual.add(despesa3)
+
+
+
+        val collectionRef = db.collection("Despesas")
+
+        collectionRef.whereEqualTo("Conta", user?.displayName).get()
+            .addOnSuccessListener { querySnapshot ->
+
+                for (document in querySnapshot) {
+                    val valor = document.getLong("Valor")
+                    val nome = document.getString("Nome")
+                    recyclerView_PerfilIndividual.adapter = adapter_Individual
+                    val despesa = DespesaIndividual(nome.toString(),
+                        valor.toString())
+
+                    itens_Perfil.add(despesa)
+                }
+            }
     }
 
     @SuppressLint("SetTextI18n")
