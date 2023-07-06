@@ -1,12 +1,16 @@
 package com.example.despesasemdia_dd.despesas
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.adapter.AdapterDespesas
+import com.example.despesasemdia_dd.adicionardespesa.AdicionarDespesa
 import com.example.despesasemdia_dd.model.Despesass
+import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -17,6 +21,11 @@ class Despesas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_despesas)
+
+
+        irParaAdd()
+        voltarParaPrincipal()
+        voltar()
 
         val recyclerView_despesas = findViewById<RecyclerView>(R.id.recyclerPagDespesas)
         recyclerView_despesas.layoutManager = LinearLayoutManager(this)
@@ -82,4 +91,31 @@ class Despesas : AppCompatActivity() {
 //        )
 //        listaDespesas.add(despesa3)
     }
+    private fun voltar(){
+        val btvoltar = findViewById<ImageButton>(R.id.imageButton)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, PerfilIndividual::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun voltarParaPrincipal(){
+        val btvoltar = findViewById<ImageButton>(R.id.imageButton8)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, PerfilIndividual::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun irParaAdd(){
+        val btvoltar = findViewById<ImageButton>(R.id.imageButton12)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, AdicionarDespesa::class.java)
+            startActivity(intent)
+        }
+    }
+
 }
