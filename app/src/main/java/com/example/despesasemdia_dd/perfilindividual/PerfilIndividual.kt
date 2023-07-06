@@ -12,8 +12,8 @@ import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.adapter.AdapterPerfil
 import com.example.despesasemdia_dd.adicionardespesa.AdicionarDespesa
 import com.example.despesasemdia_dd.configconta.ConfigConta
+import com.example.despesasemdia_dd.despesas.Despesas
 import com.example.despesasemdia_dd.model.DespesaIndividual
-import com.example.despesasemdia_dd.model.Despesas
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -101,7 +101,7 @@ class PerfilIndividual : AppCompatActivity() {
         }
     }
 
-    private fun irParaDespesa() {
+    private fun irParaDespesa(){
         val btvoltar = findViewById<ImageButton>(R.id.btnRelatorioDespesaPerfil)
 
         btvoltar.setOnClickListener { view ->
