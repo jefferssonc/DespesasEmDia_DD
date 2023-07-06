@@ -30,6 +30,8 @@ class PerfilIndividual : AppCompatActivity() {
         irParaAdd()
         irParaDespesa()
         irParaConfig()
+        voltarParaPrincipal()
+
 
         val recyclerView_PerfilIndividual = findViewById<RecyclerView>(R.id.recyclerViewPerfilIndividual)
         recyclerView_PerfilIndividual.layoutManager = LinearLayoutManager(this)
@@ -83,14 +85,14 @@ class PerfilIndividual : AppCompatActivity() {
     }
 
 
-//    private fun voltarParaPrincipal(){
-//        val btvoltar = findViewById<ImageButton>(R.id.btnVoltarPerfilIndividual)
-//
-//        btvoltar.setOnClickListener{view ->
-//            val intent = Intent(this, PaginaInicial::class.java)
-//            startActivity(intent)
-//        }
-//    }
+    private fun voltarParaPrincipal(){
+        val btvoltar = findViewById<ImageButton>(R.id.btnHomePerfil)
+
+        btvoltar.setOnClickListener{view ->
+            val intent = Intent(this, PerfilIndividual::class.java)
+            startActivity(intent)
+        }
+    }
 
     private fun irParaAdd() {
         val btvoltar = findViewById<ImageButton>(R.id.btnAdicionarDespesaPerfil)
