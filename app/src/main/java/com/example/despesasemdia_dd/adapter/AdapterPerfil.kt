@@ -45,7 +45,7 @@ class AdapterPerfil(private val context : Context, private val despesaPerfil:Mut
                 val docRef = db.collection("Despesas").document(categoria.text.toString() + user?.displayName)
                 docRef.delete().addOnSuccessListener {
                     val snackbar =
-                    Snackbar.make(view, "Despesa deletada. Atualize a página", Snackbar.LENGTH_SHORT)
+                    Snackbar.make(view, "Despesa deletada. Atualize o aplicativo", Snackbar.LENGTH_SHORT)
                     snackbar.setBackgroundTint(Color.GREEN)
                     snackbar.show()
                 }
