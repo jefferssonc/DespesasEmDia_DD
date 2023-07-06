@@ -16,6 +16,9 @@
             android:name=".despesaunica.DespesaUnica"
             android:exported="false" />
         <activity
+            android:name=".adicionardespesa.AdicionarDespesa"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -37,10 +40,10 @@
             android:name=".deletarconta.DeletarConta"
             android:exported="false" />
         <activity
-            android:name=".configconta.ConfigConta"
+            android:name=".despesas.Despesas"
             android:exported="false" />
         <activity
-            android:name=".despesas.Despesas"
+            android:name=".configconta.ConfigConta"
             android:exported="false" />
         <activity
             android:name=".criarconta.CriarConta"

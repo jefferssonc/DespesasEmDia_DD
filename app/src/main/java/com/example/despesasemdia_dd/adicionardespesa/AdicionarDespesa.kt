@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.despesasemdia_dd.R
-import com.example.despesasemdia_dd.paginainicial.PaginaInicial
+import com.example.despesasemdia_dd.perfilindividual.PerfilIndividual
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -49,7 +49,7 @@ class AdicionarDespesa : AppCompatActivity() {
         val btvoltar = findViewById<ImageButton>(R.id.imageButton2)
 
         btvoltar.setOnClickListener{view ->
-            val intent = Intent(this, PaginaInicial::class.java)
+            val intent = Intent(this, PerfilIndividual::class.java)
             startActivity(intent)
         }
     }
