@@ -35,7 +35,7 @@ class AdicionarDespesa : AppCompatActivity() {
                         "Nome" to categoria.text.toString(),
                         "Conta" to user?.displayName
                     )
-                    db.collection("Despesas").document()
+                    db.collection("Despesas").document(categoria.text.toString() + user?.displayName)
                         .set(usersmap).addOnCompleteListener {
                             val snackbar =
                                 Snackbar.make(view, "Despesa adicionada", Snackbar.LENGTH_SHORT)

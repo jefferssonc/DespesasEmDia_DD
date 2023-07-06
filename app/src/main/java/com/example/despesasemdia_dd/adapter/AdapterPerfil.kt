@@ -1,6 +1,7 @@
 package com.example.despesasemdia_dd.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
 import com.example.despesasemdia_dd.model.DespesaIndividual
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class AdapterPerfil(private val context : Context, private val despesaPerfil:MutableList<DespesaIndividual>):RecyclerView.Adapter<AdapterPerfil.PerfilViewHolder>() {
 
@@ -35,8 +39,16 @@ class AdapterPerfil(private val context : Context, private val despesaPerfil:Mut
             dataDespe.text = despesa.dataDespesa
             valorDespesa.text = despesa.precoDespesa.toString()
 
-            botao.setOnClickListener{
-                //Implementar o deletar do botão
+            botao.setOnClickListener{view->
+                val db = FirebaseFirestore.getInstance()
+                val user = FirebaseAuth.getInstance().currentUser
+                val docRef = db.collection("Despesas").document(categoria.text.toString() + user?.displayName)
+                docRef.delete().addOnSuccessListener {
+                    val snackbar =
+                    Snackbar.make(view, "Despesa deletada. Atualize a página", Snackbar.LENGTH_SHORT)
+                    snackbar.setBackgroundTint(Color.GREEN)
+                    snackbar.show()
+                }
             }
         }
 

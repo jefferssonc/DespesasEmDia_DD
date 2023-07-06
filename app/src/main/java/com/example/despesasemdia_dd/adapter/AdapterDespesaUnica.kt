@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.despesasemdia_dd.R
@@ -29,9 +30,13 @@ class AdapterDespesaUnica(private val context: Context, private val despesasItem
     inner class DespesaUnicaViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
             val valorDespesaItem = itemView.findViewById<TextView>(R.id.textValorDespesaUnicaItem)
             val dataDespesaItem = itemView.findViewById<TextView>(R.id.textDataDespesaUnicaItem)
+            val botao = itemView.findViewById<ImageButton>(R.id.btnDespesas)
         fun bind(despesaunica : DespesaUnicaDC){
             valorDespesaItem.text = despesaunica.valor.toString()
             dataDespesaItem.text = despesaunica.dataValorUnico
+            botao.setOnClickListener{
+                //
+            }
         }
     }
 }
